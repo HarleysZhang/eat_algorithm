@@ -1317,14 +1317,17 @@ public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         vector<int> ret;
         deque<int> window;  // 创建双端队列,单调递减的队列
+        
         // 先将第一个窗口的值按照规则入队
         for (int i = 0; i < k; i++) {
             while (!window.empty() && window.back() < nums[i]) {
-                window.pop_back();
+                window.pop_back(); // 移除后端元素
             }
             window.push_back(nums[i]);
         }
+        
         ret.push_back(window.front());
+
         // 模拟滑动窗口的移动
         for (int j = k; j < nums.size(); j++) {
             if (nums[j - k] == window.front()) window.pop_front();  // 移动后窗口的前一个元素等于队头元素
