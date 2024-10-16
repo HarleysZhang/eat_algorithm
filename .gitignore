@@ -1,3 +1,4 @@
 .DS_Store
-code/greedy/leetcode63-maxProfit.dSYM
-code/monotone_stack/leetcode84.dSYM
+src/greedy/leetcode63-maxProfit.dSYM
+src/monotone_stack/leetcode84.dSYM
+cmake-build-debug

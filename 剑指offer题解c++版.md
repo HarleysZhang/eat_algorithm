@@ -114,7 +114,7 @@ public:
      */
     // 哈希表法
     int duplicate(vector<int>& numbers) {
-        // write code here
+        // write src here
         multiset<int> set1;          
         for(auto i: numbers){
             set1.insert(i);
